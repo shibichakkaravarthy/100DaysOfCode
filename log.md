@@ -1,32 +1,9 @@
 # 100 Days Of Code - Log
 
-### Day 0: February 5, 2019 (Example 1)
+### Day 0: February 7, 2019
 
-##### (delete me or comment me out)
+**Today's Progress**: Created the Skeleton of the app. working on UI, States and props for now
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+**Thoughts:** Today I accounted a problem which is troubling me very much. I maped through an Array of objects to render the details in a Card Component. I added a onClick event for that and the fuction will do a console.log. But it logged for all cards without clicking. Still figuring it out...
 
-**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
-
-**Link to work:** [Portfolio Page](http://www.example.me)
-
-### Day 0: February 6, 2019 (Example 2)
-
-##### (delete me or comment me out)
-
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
-
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
-
-**Link(s) to work**: [Calculator App](http://www.example.me)
-
-### Day 1: February 7, Thursday
-
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
-
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
-
-**Link(s) to work**
-
-1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
-2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+**Link to work:** For Today, clone my repository into your Computer and run 'npm install' and then 'npm start'. Today I didn't had time for creating a link. Sorry!!!
