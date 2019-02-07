@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+#Products {
+  width: 65%;
+}

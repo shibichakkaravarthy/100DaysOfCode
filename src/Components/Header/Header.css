@@ -1,0 +1,35 @@
+.name {
+	font-size: 48px;
+	font-weight: bolder;
+	color: #30b7fb;
+}
+
+.nav {
+	padding: 25px;
+}
+
+.nav:after {
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid #000;
+	transform: scaleX(0.9);
+}
+
+.nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+}
+
+.nav ul li {
+	margin: auto;
+	transition: all 0.3s ease-in;
+	cursor: pointer;
+}
+
+.nav ul li:hover {
+	transform: scale(1.1);
+}

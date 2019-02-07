@@ -1,0 +1,12 @@
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	width: 63%;
+}
+
+.card {
+	padding: 25px;
+	margin: 10px;
+	background: #ddd;
+	border-radius: 10px;
+}
