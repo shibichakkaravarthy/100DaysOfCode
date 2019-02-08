@@ -1,12 +1,14 @@
 .list {
-	width: 35%;
+	width: 100%;
 }
 
-ul {
+#heading{
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
 	width:100%;
+	background: #ccc;
+	padding: 10px 0px;
 }
 
 ul li {

@@ -3,7 +3,7 @@ import list from './list.js';
 import Card from './Card';
 import './Products.css';
 
-const Products = ({itemAdd}) => {
+const Products = ({onItemAdd}) => {
 
 	const products = list.map((user, i) => {
 
@@ -11,12 +11,11 @@ const Products = ({itemAdd}) => {
 
 		return( 
 			<Card 
-				itemAdd = {itemAdd}
 				key={i} 
 				name={name} 
 				price={price} 
 				id={id}
-				onClick = {itemAdd(name, price)}
+				itemAdd={onItemAdd}
 			/>
 		);
 	})

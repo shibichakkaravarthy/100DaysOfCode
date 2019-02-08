@@ -9,3 +9,12 @@
 #Products {
   width: 65%;
 }
+
+#enterlist {
+	width: 33%;
+}
+
+#bind {
+	height: 312px;
+	overflow-y: scroll;
+}

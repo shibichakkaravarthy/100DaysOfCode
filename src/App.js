@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Components/Header/Header';
 import Products from './Components/Products/Products';
 import Items from './Components/Items/Items';
+import Enterlist from './Components/Enterlist/Enterlist';
 import './App.css';
 
 class App extends Component {
@@ -15,7 +16,15 @@ class App extends Component {
   }
 
   onItemAdd = (name, price) => {
-    console.log(name, price);
+    let quantity = 1;
+    this.setState({
+      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
+      total: this.state.total + price*quantity
+    })
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.total);
   }
 
 
@@ -24,8 +33,19 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className='content'>
-          <Products itemAdd={this.onItemAdd} id='Products'/>
-          <Items />
+          <Products id='Products' onItemAdd={ this.onItemAdd }/>
+          <div id='enterlist'>
+              <Items/>
+              <div id='bind'>
+                {
+                  this.state.items.map((obj,i) => {
+                  return( 
+                    <Enterlist name = {this.state.items[i].name} i={i+1} price = {this.state.items[i].price} quantity = {this.state.items[i].quantity} amount = {this.state.items[i].amount} key={i} total = {this.state.total}/>
+                  ); 
+                  })
+                }
+              </div>
+          </div>
         </div>
 
       </div>

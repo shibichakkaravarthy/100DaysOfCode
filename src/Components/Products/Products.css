@@ -1,7 +1,9 @@
 .menu {
 	display: flex;
 	flex-wrap: wrap;
-	width: 63%;
+	width: 60%;
+	overflow-y: scroll;
+	height: 73vh;
 }
 
 .card {
@@ -9,4 +11,6 @@
 	margin: 10px;
 	background: #ddd;
 	border-radius: 10px;
+	height: 75px;
+	width: 150px;
 }

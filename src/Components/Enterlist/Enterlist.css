@@ -1,0 +1,15 @@
+#enter {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#enter li {
+	margin: auto;
+}
+
+#total {
+	position: absolute;
+	right: 95px;
+	bottom: 20px;
+}
