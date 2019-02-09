@@ -5,11 +5,11 @@ const Items = () => {
 	return(
 		<div className='list'>
 			<ul id='heading'>
-				<li>S no</li>
-				<li>Name</li>
-				<li>Price</li>
-				<li>Quantity</li>
-				<li>Amount</li>
+				<li style={{width: '10%'}}>S no</li>
+				<li style={{width: '30%'}}>Name</li>
+				<li style={{width: '20%'}}>Price</li>
+				<li style={{width: '20%'}}>Quantity</li>
+				<li style={{width: '10%'}}>Amount</li>
 			</ul>
 		</div>
 	);

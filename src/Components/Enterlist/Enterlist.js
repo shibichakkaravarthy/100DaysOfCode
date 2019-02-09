@@ -5,11 +5,11 @@ const Enterlist = ({i, name, price, quantity, amount, total}) => {
 	return(
 		<div>
 			<ul id='enter'>
-				<li>{i}</li>
-				<li>{name}</li>
-				<li>{price}</li>
-				<li>{quantity}</li>
-				<li>{amount}</li>
+				<li style={{width: '10%'}}>{i}</li>
+				<li style={{width: '50%'}}>{name}</li>
+				<li style={{width: '10%'}}>{price}</li>
+				<li style={{width: '10%'}}>{quantity}</li>
+				<li style={{width: '10%'}}>{amount}</li>
 			</ul>
 
 			<div id='total'>

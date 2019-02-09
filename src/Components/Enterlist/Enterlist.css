@@ -2,10 +2,11 @@
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	padding-left: 10px;
 }
 
 #enter li {
-	margin: auto;
+	text-align: left;
 }
 
 #total {

@@ -1,0 +1,15 @@
+ul{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+#name {
+	width: 70%;
+}
+
+#stock {
+	width:20%;
+	margin-left: 5%;
+}

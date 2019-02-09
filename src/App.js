@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Products from './Components/Products/Products';
 import Items from './Components/Items/Items';
 import Enterlist from './Components/Enterlist/Enterlist';
+import Inventory from './Components/Inventory/Inventory';
 import './App.css';
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
     this.state = {
       date: 0,
       items: [],
-      total: 0
+      total: 0,
+      route: 'inven'
     }
   }
 
@@ -29,12 +31,13 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div className="App">
-        <Header />
-        <div className='content'>
-          <Products id='Products' onItemAdd={ this.onItemAdd }/>
-          <div id='enterlist'>
+    if (this.state.route === 'home') {
+      return (
+        <div className="App">
+          <Header />
+          <div className='content'>
+            <Products id='Products' onItemAdd={ this.onItemAdd }/>
+            <div id='enterlist'>
               <Items/>
               <div id='bind'>
                 {
@@ -45,11 +48,20 @@ class App extends Component {
                   })
                 }
               </div>
+            </div>
           </div>
         </div>
+      );
+    }
 
-      </div>
-    );
+    else if(this.state.route === 'inven') {
+      return(
+        <div>
+          <Header />
+          <Inventory />
+        </div>
+      );
+    }
   }
 }
 
