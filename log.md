@@ -14,4 +14,12 @@
 
 **Thoughts:** Solved the yesterday's problem! Also i'm happy with today's progress. Tomorrow I have toel work with CSS to make my UI even more attractive and simple. I have to add a Save and Print Button for may app. After that, I have to work with inventory and dashboard. Hope tomorrow will not give me much trouble ;)
 
-**Link to work:** For Today, clone my repository into your Computer and run 'npm install' and then 'npm start'. Today I didn't had time for creating a link. Sorry!!!
+**Link to work:** For Today, clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 2: February 9, 2019
+
+**Today's Progress**: Created the UI for Inventory with JSX and CSS. Planning to to code the logic after the Backend is ready!!!
+
+**Thoughts:** As each day passes, I feel more comfortable and confident on Using React, which troubled me the most! Realizing the meaning of the proverb "Practice Makes A Man Perfect"!!! 
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
