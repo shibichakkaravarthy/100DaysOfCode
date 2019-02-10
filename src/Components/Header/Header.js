@@ -1,17 +1,17 @@
 import React from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({onRouting}) => {
 	return (
 		<div>
 			<div className='name'>Master Biller</div>
 			<div className='nav'>
 				<ul>
-					<li>DashBoard</li>
-					<li>Billing</li>
-					<li>Inventory</li>
-					<li>Expenses</li>
-					<li>Tokens</li>
+					<li onClick={() => onRouting('dash')}>DashBoard</li>
+					<li onClick={() => onRouting('home')}>Billing</li>
+					<li onClick={() => onRouting('inven')}>Inventory</li>
+					<li onClick={() => onRouting('exp')}>Expenses</li>
+					<li onClick={() => onRouting('token')}>Tokens</li>
 				</ul>
 			</div>
 		</div>
