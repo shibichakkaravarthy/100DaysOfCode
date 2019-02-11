@@ -13,37 +13,18 @@ class App extends Component {
       date: 0,
       items: [],
       total: 0,
-      route: 'home'
+      route: 'home',
+      products: []
     }
   }
 
   onItemAdd = (name, price) => {
-    let quantity = prompt("Quantity", 1);
-    if(this.state.items.length > 0){
-      this.state.items.map((obj, i) => {
-         if(this.state.items[i].name !== name)
-         {
-            console.log('new');
+    let quantity = prompt("Quantity", 1);  
             this.setState({
               items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
               total: this.state.total + price*quantity
-            })
-         }
-
-          else 
-          {
-            console.log(this.state.items);
-          }
       })
     }
-
-    else {
-      this.setState({
-          items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
-          total: this.state.total + price*quantity
-        })
-    }
-  }
 
   onRouting = (route) => {
     this.setState({route: route})
@@ -76,8 +57,12 @@ class App extends Component {
 
 
 
-  componentDidUpdate() {
-    console.log(this.state.items);
+  componentDidMount() {
+    fetch('http://localhost:3000')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({products: data})
+      })
   }
 
 
@@ -87,7 +72,7 @@ class App extends Component {
         <div className="App">
           <Header onRouting={this.onRouting}/>
           <div className='content'>
-            <Products id='Products' onItemAdd={ this.onItemAdd }/>
+            <Products id='Products' onItemAdd={ this.onItemAdd } product={this.state.products}/>
             <div id='enterlist'>
               <Items/>
               <div id='bind'>
@@ -109,7 +94,7 @@ class App extends Component {
       return(
         <div>
           <Header onRouting={this.onRouting} />
-          <Inventory />
+          <Inventory product = {this.state.products}/>
         </div>
       );
     }

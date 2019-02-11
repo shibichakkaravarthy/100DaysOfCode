@@ -1,24 +1,26 @@
 import React, {Component} from 'react';
-import list from '../Products/list';
 import Element from './Element';
 
 class Inventory extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			id: 0,
 			name: '',
 			stock: 0
 		}
-	}
+	} 
 
 	render() {
+
+		const {product} = this.props;
+
 		return(
 			<div style={{width: '70%', margin: '10px auto'}}>
 				{
-					list.map((obj,i) => {
+					product.map((obj,i) => {
 						return(
-							<Element name = {list[i].name} stock = {list[i].stock} reorder = {list[i].reorder} />
+							<Element key={i} i={i+1} name = {product[i].name} stock = {product[i].stock} reorder = {product[i].reorder} stockf = {this.stockf} />
 						);
 					})
 				}

@@ -6,10 +6,19 @@ ul{
 }
 
 #name {
-	width: 70%;
+	width: 30%;
+	margin: 10px auto;
 }
 
 #stock {
 	width:20%;
-	margin-left: 5%;
+	margin: 10px auto;
+}
+
+#oldstk {
+	margin: 10px auto;
+}
+
+#index {
+	margin: 10px auto;
 }

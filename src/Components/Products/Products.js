@@ -1,13 +1,14 @@
 import React from 'react';
-import list from './list.js';
 import Card from './Card';
 import './Products.css';
 
-const Products = ({onItemAdd}) => {
+const Products = ({onItemAdd, product}) => {
 
-	const products = list.map((user, i) => {
+	console.log('test',product);
 
-		const { name, price, id} = list[i];
+	const products = product.map((user, i) => {
+
+		const { name, price, id} = product[i];
 
 		return( 
 			<Card 
