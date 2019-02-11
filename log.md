@@ -23,3 +23,11 @@
 **Thoughts:** As each day passes, I feel more comfortable and confident on Using React, which troubled me the most! Realizing the meaning of the proverb "Practice Makes A Man Perfect"!!! 
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 3: February 10, 2019
+
+**Today's Progress**: Solved some issue with Quantity. But still many things to fix.
+
+**Thoughts:** Devops is not easy as we think but at the same time, It's not hard as we think. Simple code blocks to solve big problems and Big Code blocks to solve simple problems
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
