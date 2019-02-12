@@ -13,4 +13,20 @@
 	border-radius: 10px;
 	height: 75px;
 	width: 150px;
+	text-align: center;
+}
+
+.card #name {
+	margin: 0px auto;
+	padding: 0;
+
+}
+
+.card #id {
+	margin: 0px auto;
+	padding: 0;
+}
+
+.card #price {
+	margin: 0px auto;
 }

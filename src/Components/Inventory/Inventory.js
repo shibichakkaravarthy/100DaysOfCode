@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Element from './Element';
+import './Inventory.css';
 
 class Inventory extends Component {
 	constructor(props) {
@@ -20,10 +21,12 @@ class Inventory extends Component {
 				{
 					product.map((obj,i) => {
 						return(
-							<Element key={i} i={i+1} name = {product[i].name} stock = {product[i].stock} reorder = {product[i].reorder} stockf = {this.stockf} />
+							<Element key={i} i={i+1} name = {product[i].name} stock = {product[i].stock} reorder = {product[i].reorder} />
 						);
 					})
 				}
+
+				<div className='addbutton'><p>+</p></div>
 			</div>
 		);
 	}

@@ -10,8 +10,12 @@ class Element extends React.Component {
 		}
 	}
 
-	stockf =  (event) => {
-		console.log(event.target.value);
+	stockf =  (event,name) => {
+		console.log(event.target.value,name);
+	}
+
+	reorderf = (event, name) => {
+		console.log(event.target.value, name)
 	}
 	render() {
 		const {name, stock, reorder,i} = this.props;
@@ -20,8 +24,8 @@ class Element extends React.Component {
 				<ul>
 					<li id='index'>{i}</li>
 					<li id='name'>{name}</li>
-					<li id='oldstk'>{stock}</li>
-					<li><input id='stock' type='number' onChange={() => this.stockf()} /></li>
+					<li><input id='stock' type='number' placeholder={stock}onChange={(event) => this.stockf(event,name)} /></li>
+					<li><input id='reorder' type='number' placeholder={reorder}onChange={(event) => this.stockf(event,name)} /></li>
 				</ul>
 			</div>
 		);
