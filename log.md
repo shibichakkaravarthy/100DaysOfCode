@@ -31,3 +31,19 @@
 **Thoughts:** Devops is not easy as we think but at the same time, It's not hard as we think. Simple code blocks to solve big problems and Big Code blocks to solve simple problems
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 4: February 11, 2019
+
+**Today's Progress**: Fixed Some bugs related to cart and created a RESTAPI for my app.
+
+**Thoughts:** Nothing Today
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 5: February 12, 2019
+
+**Today's Progress**: Added a reorder level field in inventory.
+
+**Thoughts:** Learned a new way of passing aurguments to an onChange event! this will be very useful for me
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
