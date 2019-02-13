@@ -4,6 +4,7 @@ import Products from './Components/Products/Products';
 import Items from './Components/Items/Items';
 import Enterlist from './Components/Enterlist/Enterlist';
 import Inventory from './Components/Inventory/Inventory';
+import Cart from './Components/Cart/Cart';
 import './App.css';
 
 class App extends Component {
@@ -14,17 +15,46 @@ class App extends Component {
       items: [],
       total: 0,
       route: 'home',
-      products: []
+      products: [],
     }
   }
 
   onItemAdd = (name, price) => {
-    let quantity = prompt("Quantity", 1);  
-            this.setState({
-              items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
-              total: this.state.total + price*quantity
-      })
+    let quantity = parseInt(prompt("Quantity", 1)); 
+    const itm = this.state.items;
+
+    console.log('1 success');
+
+    if(itm.length !== 0) {
+	    console.log('2 success');
+    	for(var i = 0; i < itm.length; i++) {
+	    	if(name === itm[i].name) {
+    console.log('3 success');
+
+	    	itm[i].quantity = quantity+itm[i].quantity;
+	    	itm[i].amount = itm[i].quantity * price;
+	    	this.setState({items: itm});
+	    	break;
+	    	}
+
+	    	else {
+    console.log('4 success');
+
+	    		this.setState({
+				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
+				      total: this.state.total + price*quantity
+				})
+	    	}
+    	}
     }
+
+    else {
+    	this.setState({
+				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
+				      total: this.state.total + price*quantity
+				})
+    }
+  }
 
   onRouting = (route) => {
     this.setState({route: route})
@@ -32,7 +62,7 @@ class App extends Component {
 
   removeEntry = (i) => {
     var items = this.state.items;
-    if(items === 1){
+    if(items[i].quantity === 1){
       items.splice(i,1);
       this.setState({items: items})
     }
@@ -79,7 +109,7 @@ class App extends Component {
                 {
                   this.state.items.map((obj,i) => {
                   return( 
-                    <Enterlist removeEntry={this.removeEntry} quantityChange={this.quantityChange} name = {this.state.items[i].name} i={i+1} price = {this.state.items[i].price} quantity = {this.state.items[i].quantity} amount = {this.state.items[i].amount} key={i} total = {this.state.total}/>
+                    <Enterlist removeEntry={this.removeEntry} onRouting={this.onRouting} quantityChange={this.quantityChange} name = {this.state.items[i].name} i={i+1} price = {this.state.items[i].price} quantity = {this.state.items[i].quantity} amount = {this.state.items[i].amount} key={i} total = {this.state.total}/>
                   ); 
                   })
                 }
@@ -95,6 +125,15 @@ class App extends Component {
         <div>
           <Header onRouting={this.onRouting} />
           <Inventory product = {this.state.products}/>
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'cart') {
+    	return(
+        <div>
+          <Header onRouting={this.onRouting} />
+          <Cart items = {this.state.items} total = {this.state.total} onRouting = {this.onRouting}/>
         </div>
       );
     }

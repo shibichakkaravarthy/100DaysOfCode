@@ -4,8 +4,6 @@ import './Products.css';
 
 const Products = ({onItemAdd, product}) => {
 
-	console.log('test',product);
-
 	const products = product.map((user, i) => {
 
 		const { name, price, id} = product[i];

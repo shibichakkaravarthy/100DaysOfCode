@@ -11,6 +11,25 @@
 
 #total {
 	position: absolute;
-	right: 95px;
+	right: 155px;
 	bottom: 20px;
+}
+
+#paybutton {
+	background: #4c4cff;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 25px;
+	margin: 5px 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#paybutton:hover {
+	transform: scale(1.2);
+}
+
+#paybutton:active {
+	transform: scale(0.9);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Enterlist.css'
 
-const Enterlist = ({quantityChange, removeEntry, i, name, price, quantity, amount, total}) => {
+const Enterlist = ({quantityChange, removeEntry, i, name, price, quantity, amount, total, onRouting}) => {
 	return(
 		<div>
 			<ul id='enter' >
@@ -13,6 +13,7 @@ const Enterlist = ({quantityChange, removeEntry, i, name, price, quantity, amoun
 			</ul>
 
 			<div id='total'>
+				<div id='paybutton' onClick={() => onRouting('cart')}>Pay</div>
 				Grand total = {total}
 			</div>
 		</div>
