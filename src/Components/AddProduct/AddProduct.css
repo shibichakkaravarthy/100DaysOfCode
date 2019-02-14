@@ -1,0 +1,39 @@
+#bg {
+	width: 100%;
+	margin: 10px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#name {
+	margin: 5px auto;
+}
+
+#price {
+	margin: 5px auto;
+}
+
+#invencheck {
+	margin: 10px auto;
+}
+
+#add {
+	border-radius: 50%;
+	text-align: center;
+	border: 1px solid #777;
+	font-size: 20px;
+	font-weight: bolder;
+	line-height: 20px;
+	height: 25px;
+	width: 25px;
+	margin: 5px auto;
+	transition: all 0.3s ease;
+}
+
+#add:hover {
+	transform: scale(1.1);
+}
+
+#add:active {
+	transform: scale(0.8);
+}

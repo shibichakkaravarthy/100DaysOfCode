@@ -14,7 +14,7 @@ class Inventory extends Component {
 
 	render() {
 
-		const {product} = this.props;
+		const {product,onRouting} = this.props;
 
 		return(
 			<div style={{width: '70%', margin: '10px auto'}}>
@@ -26,7 +26,7 @@ class Inventory extends Component {
 					})
 				}
 
-				<div className='addbutton'><p>+</p></div>
+				<div className='addbutton' onClick = {() => onRouting('addprod')}><p>+</p></div>
 			</div>
 		);
 	}

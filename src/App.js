@@ -5,6 +5,7 @@ import Items from './Components/Items/Items';
 import Enterlist from './Components/Enterlist/Enterlist';
 import Inventory from './Components/Inventory/Inventory';
 import Cart from './Components/Cart/Cart';
+import AddProduct from './Components/AddProduct/AddProduct';
 import './App.css';
 
 class App extends Component {
@@ -85,14 +86,18 @@ class App extends Component {
     console.log(i);
   }
 
+  addProduct = () => {
+    console.log('add product working')
+  }
+
 
 
   componentDidMount() {
-    fetch('http://localhost:3000')
+    fetch('http://localhost:3000/')
       .then(response => response.json())
       .then(data => {
         this.setState({products: data})
-      })
+       })
   }
 
 
@@ -124,7 +129,7 @@ class App extends Component {
       return(
         <div>
           <Header onRouting={this.onRouting} />
-          <Inventory product = {this.state.products}/>
+          <Inventory product = {this.state.products} onRouting={this.onRouting} />
         </div>
       );
     }
@@ -134,6 +139,15 @@ class App extends Component {
         <div>
           <Header onRouting={this.onRouting} />
           <Cart items = {this.state.items} total = {this.state.total} onRouting = {this.onRouting}/>
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'addprod') {
+      return(
+        <div>
+          <Header onRouting = {this.onRouting} />
+          <AddProduct addProduct = {this.addProduct} />
         </div>
       );
     }
