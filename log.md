@@ -47,18 +47,3 @@
 **Thoughts:** Learned a new way of passing aurguments to an onChange event! this will be very useful for me
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
-
-### Day 6: February 13, 2019
-
-**Today's Progress**: Added an Add Product Button in Inventory and creted some EndPoints in the backend.
-
-**Thoughts:** Nothing New!
-
-**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
-
-### Day 7: February 14, 2019
-
-**Today's Progress**: Created a Database for the App
-**Thoughts:** Learned about Fetch and Promises in more detail. Today I was taught that even a silly mistake which escapes from our eyes can make the App to behave like a Madman :@
-
-**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.

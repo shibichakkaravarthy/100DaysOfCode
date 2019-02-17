@@ -127,7 +127,7 @@ class App extends Component {
 
     else if(this.state.route === 'inven') {
       return(
-        <div>
+        <div className="App">
           <Header onRouting={this.onRouting} />
           <Inventory product = {this.state.products} onRouting={this.onRouting} />
         </div>
@@ -136,7 +136,7 @@ class App extends Component {
 
     else if(this.state.route === 'cart') {
     	return(
-        <div>
+        <div className="App">
           <Header onRouting={this.onRouting} />
           <Cart items = {this.state.items} total = {this.state.total} onRouting = {this.onRouting}/>
         </div>
@@ -145,7 +145,7 @@ class App extends Component {
 
     else if(this.state.route === 'addprod') {
       return(
-        <div>
+        <div className="App">
           <Header onRouting = {this.onRouting} />
           <AddProduct addProduct = {this.addProduct} />
         </div>

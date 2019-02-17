@@ -11,5 +11,7 @@
 	padding: 10px 0px;
 }
 
-ul li {
+#th {
+	text-align: left;
+	margin: auto;
 }
