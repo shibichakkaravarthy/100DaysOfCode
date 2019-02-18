@@ -71,3 +71,8 @@ Today's Progress: Worked with database and Server to Optimise them
 Today's Progress: Created support for Stock inventory in both front end and backend. It seems like I have so many things to learn yet
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 10: February 17, 2019
+Today's Progress: improved UI using tables and CSS selectors. Created tables in database for bill history and sold items.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
