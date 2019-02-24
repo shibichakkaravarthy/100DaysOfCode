@@ -76,3 +76,46 @@ Today's Progress: Created support for Stock inventory in both front end and back
 Today's Progress: improved UI using tables and CSS selectors. Created tables in database for bill history and sold items.
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 11: February 18, 2019
+Today's Progress: Tried to Add Billed Items to the tables in the database.
+
+Thoughts: The toughest task will look like the easiest task in devops.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 12: February 19, 2019
+Today's Progress: Tired of the error and trials with all methods and transaction in db. So going to skip it and move on to the next task.
+
+Thoughts: The toughest task will look like the easiest task in devops.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 13: February 20, 2019
+Today's Progress: Created Expense List UI and created a Table for it in the Database.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 14: February 21, 2019
+Today's Progress: created an Add Expense Button and Added Functions to it.
+
+Thoughts: The toughest task will look like the easiest task in devops.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 15: February 22, 2019
+Today's Progress: According to the rule of this challenge, One can take a day off for every two weeks. Due to extreme pressure from my Business side, I took a day off!
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 16: February 23, 2019
+Today's Progress: Created Alert Popups for Success on Add Product page.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 17: February 24, 2019
+Today's Progress: Created some styles and colours for Success and Error Popups on Add Product Page
+
+Thoughts: The Most complicated looking Problem will be solved with a very simple solution.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
