@@ -119,3 +119,19 @@ Today's Progress: Created some styles and colours for Success and Error Popups o
 Thoughts: The Most complicated looking Problem will be solved with a very simple solution.
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 18: February 25, 2019
+Today's Progress: Styled the Expenses Section with different colours to find which are approved, rejeted and pending Expense.
+
+Thoughts: Nothing
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+### Day 19: February 26, 2019
+Today's Progress: Tried a new way to add Billed items to the database but still failing.
+
+Thoughts: The Most complicated looking Problem will be solved with a very simple solution.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
+
