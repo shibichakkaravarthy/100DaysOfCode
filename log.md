@@ -134,4 +134,11 @@ Thoughts: The Most complicated looking Problem will be solved with a very simple
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
 
+### Day 20: February 27, 2019
+Today's Progress: Added UI for Filing Expenses
+
+Thoughts: The Most complicated looking Problem will be solved with a very simple solution.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+
 
