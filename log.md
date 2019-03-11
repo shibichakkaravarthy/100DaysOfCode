@@ -232,4 +232,25 @@ Today's Progress: Holly Molly!!! Finally biled items are added to the database..
 
 Thoughts: Only Knowledge and Expirience matters when it comes to development
 
-**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 30: March 9, 2019
+Today's Progress: Created a Dashboard Component to display all details about the store and created some of the cards in it.
+
+Thoughts: Victory gives Happiness but only Failures can give Lessons.
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 31: March 10, 2019
+Today's Progress: created a card to display Date and Time and a Navigation component to navigate within Dashboard
+
+Thoughts: Nothing New!
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 32: March 11, 2019
+Today's Progress:  Added a function to decrease the stock as products are get billed. Tried to display the Today bills and monthly expenses in Dashboard but failed.
+
+Thoughts: Only Knowledge and Expirience matters when it comes to development
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
