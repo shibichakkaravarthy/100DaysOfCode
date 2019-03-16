@@ -6,7 +6,7 @@ const Products = ({onItemAdd, product}) => {
 
 	const products = product.map((user, i) => {
 
-		const { name, price, id} = product[i];
+		const { name, price, id, inven} = product[i];
 
 		return( 
 			<Card 
@@ -14,6 +14,7 @@ const Products = ({onItemAdd, product}) => {
 				name={name} 
 				price={price} 
 				id={id}
+				inven={inven}
 				itemAdd={onItemAdd}
 			/>
 		);

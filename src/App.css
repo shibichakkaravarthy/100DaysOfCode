@@ -11,10 +11,14 @@
 }
 
 #enterlist {
-	width: 33%;
+	width: 40%;
 }
 
 #bind {
 	height: 312px;
 	overflow-y: scroll;
+}
+
+table {
+	border-spacing: 0px;
 }

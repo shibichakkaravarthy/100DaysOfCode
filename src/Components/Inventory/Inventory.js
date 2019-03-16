@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Element from './Element';
+import Button from '../Gen/Button';
 import './Inventory.css';
 
 class Inventory extends Component {
@@ -17,7 +18,23 @@ class Inventory extends Component {
 		const {product,onRouting} = this.props;
 
 		return(
-			<div style={{width: '70%', margin: '10px auto'}}>
+			<div style={{width: '70%', margin: '10px auto', marginBottom: '100px'}}>
+
+				<div style = {{float: 'right'}}>
+					<Button category = 'MEDIUM PRIMARY' text = 'File Stock Entry' />
+					<Button category = 'MEDIUM PRIMARY' text = 'File Bill Return' />
+				</div><br />
+				<br />
+				<table id='hoe' style={{width: '100%'}}>
+					<tbody>
+						<tr>
+							<th id = 'inventh' style={{width: '10%'}}>Id</th>
+							<th id = 'inventh' style={{width: '60%'}}>Name</th>
+							<th id = 'inventh' style={{width: '10%'}}>Stock</th>
+							<th id = 'inventh' style={{width: '10%'}}>Reorder</th>
+						</tr>
+					</tbody>
+				</table>
 				{
 					product.map((obj,i) => {
 						return(

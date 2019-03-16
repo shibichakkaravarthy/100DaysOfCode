@@ -6,28 +6,38 @@ class Element extends React.Component {
 		super();
 		this.state = {
 			name:'',
-			stock: 0
+			stock: 0,
+			reorder: 0
 		}
 	}
 
 	stockf =  (event,name) => {
-		console.log(event.target.value,name);
+		this.setState({
+			name: name,
+			stock: event.target.value
+		})
 	}
 
 	reorderf = (event, name) => {
-		console.log(event.target.value, name)
+		this.setState({
+			name: name,
+			reorder: event.target.value
+		})	
 	}
+
 	render() {
 		const {name, stock, reorder,i} = this.props;
 		return(
-			<div style={{margin: '10px auto'}}>
-				<ul>
-					<li id='index'>{i}</li>
-					<li id='name'>{name}</li>
-					<li><input id='stock' type='number' placeholder={stock}onChange={(event) => this.stockf(event,name)} /></li>
-					<li><input id='reorder' type='number' placeholder={reorder}onChange={(event) => this.stockf(event,name)} /></li>
-				</ul>
-			</div>
+				<table id='element' style={{width: '100%'}}>
+					<tbody>
+						<tr>
+							<td id='invenelem' style={{width: '10%'}}>{i}</td>
+							<td id='invenelem' style={{width: '60%'}}>{name}</td>
+							<td id='invenelem' style={{width: '10%'}}>{stock}</td>
+							<td id='invenelem' style={{width: '10%'}}>{reorder}</td>
+						</tr>
+					</tbody>
+				</table>
 		);
 	}
 }

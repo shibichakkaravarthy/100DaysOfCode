@@ -1,11 +1,14 @@
 #enter {
+	position: relative;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
 	padding-left: 10px;
+	border-right: 1px solid #bbb;
 }
 
 #enter li {
+	position: relative;
 	text-align: left;
 }
 
@@ -32,6 +35,10 @@
 
 #paybutton:active {
 	transform: scale(0.9);
+}
+
+tbody {
+	width: 100%;
 }
 
 td{

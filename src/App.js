@@ -6,7 +6,23 @@ import Enterlist from './Components/Enterlist/Enterlist';
 import Inventory from './Components/Inventory/Inventory';
 import Cart from './Components/Cart/Cart';
 import AddProduct from './Components/AddProduct/AddProduct';
+import Expense from './Components/Expense/Expense';
+import Signin from './Components/Signin Register/Signin';
+import {
+      PopupboxManager,
+      PopupboxContainer
+    } from 'react-popupbox';
+import Dashboard from './Components/Dashboard/Dashboard.js'
+import './Components/react-popupbox.css'
 import './App.css';
+
+const initialState = {
+  date: 0,
+  items:[],
+  total: 0,
+  route: 'home',
+  products: []
+}
 
 class App extends Component {
   constructor(props) {
@@ -17,10 +33,11 @@ class App extends Component {
       total: 0,
       route: 'home',
       products: [],
-    }
+      bill: 0
+    };
   }
 
-  onItemAdd = (name, price) => {
+  onItemAdd = (name, price, inven) => {
     let quantity = parseInt(prompt("Quantity", 1)); 
     const itm = this.state.items;
 
@@ -32,8 +49,9 @@ class App extends Component {
 	    	if(name === itm[i].name) {
     console.log('3 success');
 
-	    	itm[i].quantity = quantity+itm[i].quantity;
+	    	itm[i].quantity =parseInt(quantity+itm[i].quantity);
 	    	itm[i].amount = itm[i].quantity * price;
+        itm[i].inven = inven;
 	    	this.setState({items: itm});
 	    	break;
 	    	}
@@ -42,8 +60,7 @@ class App extends Component {
     console.log('4 success');
 
 	    		this.setState({
-				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
-				      total: this.state.total + price*quantity
+				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity, inven: inven}),
 				})
 	    	}
     	}
@@ -51,10 +68,63 @@ class App extends Component {
 
     else {
     	this.setState({
-				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity}),
-				      total: this.state.total + price*quantity
+				      items: this.state.items.concat({name: name, price: price, quantity: quantity, amount: price*quantity, inven: inven}),
 				})
     }
+  }
+
+  popupClose = () => {
+    this.onRouting('home');
+    this.setState({items: []});
+  }
+
+  openPopupbox() {
+            const content = (
+              <div>
+                <div style={{textAlign: 'center', color: 'green'}}>SUCCESS!</div>
+                <div>{`Your Order No in ${this.state.bill}`}</div>
+              </div>
+            )
+
+            PopupboxManager.open({ 
+              content,
+              config: {
+                titleBar: {
+                  className: 'SUCCESS',
+                  enable: true,
+                  text: 'Success',
+                  closeButton: true
+                },
+                escClose: true,
+                overlayClose: true,
+                onClosed: () => {this.popupClose()}
+              } 
+            })
+          }
+
+  onSaving = () => {
+    fetch('http://localhost:3000/billed', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        items: this.state.items,
+        total: this.state.total,
+        date: new Date()
+      })
+    })
+    .then(response => response.json())
+      .then(data => {
+        if(data.status === 'success') {
+          console.log(data.billno[0])
+          this.setState({
+            bill: data.billno[0]
+          })
+          console.log(this.state.bill)
+          this.openPopupbox();
+        }
+      })
   }
 
   onRouting = (route) => {
@@ -74,20 +144,24 @@ class App extends Component {
       it.amount = it.quantity * it.price;
       items.splice(i,1,it);
       this.setState({
-        items: items,
-        total: this.state.total - it.price
+        items: items
       })
 
 
     }
   }
 
-  quantityChange = (i) => {
+  quantityChange = (i,event) => {
     console.log(i);
-  }
+    let listItems = this.state.items;
+    listItems[i-1].quantity = event.target.value;
+    listItems[i-1].amount = listItems[i-1].price * event.target.value;
+    console.log(listItems);
 
-  addProduct = () => {
-    console.log('add product working')
+    this.setState({
+      items: listItems,
+    })
+
   }
 
 
@@ -97,7 +171,27 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({products: data})
+        console.log(data);
        })
+  }
+
+  componentDidUpdate (previousProps, previousState) {
+    let listItems = this.state.items;
+    let total = 0;
+
+    listItems.map(obj => {
+      total = total + obj.amount;
+      return(total);
+    })
+
+    if(total !== this.state.total) {
+      this.setState({
+        total: total
+      })
+    }
+
+    console.log(this.state.items);
+
   }
 
 
@@ -138,7 +232,7 @@ class App extends Component {
     	return(
         <div className="App">
           <Header onRouting={this.onRouting} />
-          <Cart items = {this.state.items} total = {this.state.total} onRouting = {this.onRouting}/>
+          <Cart items = {this.state.items} total = {this.state.total} onSaving = {this.onSaving}/>
         </div>
       );
     }
@@ -147,7 +241,34 @@ class App extends Component {
       return(
         <div className="App">
           <Header onRouting = {this.onRouting} />
-          <AddProduct addProduct = {this.addProduct} />
+          <AddProduct />
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'exp') {
+      return(
+        <div className="App">
+          <Header onRouting = {this.onRouting} />
+          <Expense />
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'signin') {
+      return(
+        <div className="App">
+          <Header onRouting = {this.onRouting} />
+          <Signin />
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'dash') {
+      return(
+        <div className="App">
+          <Header onRouting = {this.onRouting} />
+          <Dashboard />
         </div>
       );
     }

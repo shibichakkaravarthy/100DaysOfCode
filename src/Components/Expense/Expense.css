@@ -1,0 +1,52 @@
+#exptable {
+	width: 90%;
+	margin: 0px auto;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+#exptable:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: 1px solid #999;
+}
+
+#exptable:nth-child(even) {
+	background-color: #eaeaea
+}
+
+#td {
+	padding: 5px;
+	margin: 0px;
+	border-spacing: 0px;
+}
+
+#add {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+}
+
+#td:last-child {
+	border: none;
+}
+
+.APPROVED {
+	color: green;
+}
+
+.PENDING {
+	color: yellow;
+}
+
+.REJECTED {
+	color: red;
+}
+
+.BLUE {
+	background-color: blue;
+	color: white;
+}
+.thb{
+	background-color: #eaeaea;	
+}

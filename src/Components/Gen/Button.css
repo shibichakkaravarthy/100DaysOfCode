@@ -1,0 +1,28 @@
+#button{
+	display: inline-block;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+#button:hover {
+	transform: scale(1.1);
+}
+
+.PRIMARY {
+	background-color: blue;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+.ADD-ROUND {
+	display: block;
+	content: '+';
+	color: #fff;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	justify-content: center;
+	background: linear-gradient(120deg, #b92b27, #1565C0);
+}
