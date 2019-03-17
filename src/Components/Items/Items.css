@@ -14,4 +14,5 @@
 #th {
 	text-align: left;
 	margin: auto;
+	overflow: hidden;
 }

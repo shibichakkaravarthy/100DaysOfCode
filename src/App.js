@@ -33,7 +33,8 @@ class App extends Component {
       total: 0,
       route: 'home',
       products: [],
-      bill: 0
+      bill: 0,
+      usertype: 'admin'
     };
   }
 
