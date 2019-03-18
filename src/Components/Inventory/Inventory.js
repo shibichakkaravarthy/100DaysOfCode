@@ -17,12 +17,17 @@ class Inventory extends Component {
 
 		const {product,onRouting} = this.props;
 
+		const routing = () => {
+			console.log('HIIYAA');
+			onRouting('stockentry');
+		}
+
 		return(
 			<div style={{width: '70%', margin: '10px auto', marginBottom: '100px'}}>
 
 				<div style = {{float: 'right'}}>
-					<Button category = 'MEDIUM PRIMARY' text = 'File Stock Entry' />
-					<Button category = 'MEDIUM PRIMARY' text = 'File Bill Return' />
+					<div onClick = {routing} ><Button category = 'MEDIUM PRIMARY' text = 'File Stock Entry' /></div>
+					<div><Button category = 'MEDIUM PRIMARY' text = 'File Bill Return' /></div>
 				</div><br />
 				<br />
 				<table id='hoe' style={{width: '100%'}}>

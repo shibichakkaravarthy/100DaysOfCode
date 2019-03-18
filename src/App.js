@@ -12,7 +12,8 @@ import {
       PopupboxManager,
       PopupboxContainer
     } from 'react-popupbox';
-import Dashboard from './Components/Dashboard/Dashboard.js'
+import Dashboard from './Components/Dashboard/Dashboard'
+import StockEntry from './Components/Inventory/StockEntry'
 import './Components/react-popupbox.css'
 import './App.css';
 
@@ -167,7 +168,7 @@ class App extends Component {
 
 
 
-  componentDidMount() {
+  componentWillMount() {
     fetch('http://localhost:3000/')
       .then(response => response.json())
       .then(data => {
@@ -270,6 +271,15 @@ class App extends Component {
         <div className="App">
           <Header onRouting = {this.onRouting} />
           <Dashboard />
+        </div>
+      );
+    }
+
+    else if(this.state.route === 'stockentry') {
+      return(
+        <div className="App">
+          <Header onRouting = {this.onRouting} />
+          <StockEntry />
         </div>
       );
     }

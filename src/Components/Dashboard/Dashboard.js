@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import {Group, Cell} from './Components.js';
+import CanvasJS from 'canvasjs';
 
 
 const styles = {
