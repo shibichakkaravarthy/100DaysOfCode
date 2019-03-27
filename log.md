@@ -269,8 +269,15 @@ Thoughts: Only Knowledge and Expirience matters when it comes to development
 
 **Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
 
-### Day 35: March 11, 2019
+### Day 35: March 14, 2019
 Today's Progress:  Added a function to decrease the stock as products are get billed. Tried to display the Today bills and monthly expenses in Dashboard but failed.
+
+Thoughts: Only Knowledge and Expirience matters when it comes to development
+
+**Link to work:**Clone my repository into your Computer and run 'npm install' and then 'npm start'.
+
+### Day 36: March 15, 2019
+Today's Progress:  Modified Dashboard as a Class Based Component and added a state to the component to route within the component. 
 
 Thoughts: Only Knowledge and Expirience matters when it comes to development
 
